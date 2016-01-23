@@ -1,0 +1,15 @@
+{
+  "github": {
+    "user": {
+      "name": "mbuffa"
+    },
+    "posts": {
+      "repo": "mbuffa.github.io",
+      "branch": "posts",
+      "path": "posts"
+    },
+    "projects": {
+      "except": ["teleport"]
+    }
+  }
+}

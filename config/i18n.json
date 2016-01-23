@@ -1,0 +1,82 @@
+{
+  "en-US": {
+    "header": {
+      "title": "Maxime Buffa"
+    },
+    "topbar": {
+      "home": "Home",
+      "projects": "Projects"
+      },
+    "bio": {
+      "presentation": [
+        "Oh... Hello there!",
+        "My name is Maxime Buffa. I love building software pretty much since I was born in Paris, France in 1988.",
+        "But I also love playing video games, listening to classical, metal and synthwave music, and watching contemplative movies.",
+        "This is my personal page, and I'll try to blog regularly about some of my projects, passions and finds."
+      ]
+    },
+    "page": {
+      "home": {
+        "header": "Home",
+        "caption": []
+      },
+      "projects": {
+        "header": "Projects",
+        "caption": []
+      }
+    },
+    "footer": [
+      "This Web page is based on the <a target='_blank' href='http://github.com/mbuffa/elerium'>Elerium</a> template written by Maxime Buffa.",
+      "<br />Please feel free to fork it on Github :)"
+    ],
+    "locales": {
+      "en-US": "English",
+      "fr-FR": "French"
+    },
+    "shared": {
+      "created_at": "Created at %{} on %{}",
+      "updated_at": "Updated at %{} on %{}",
+      "fork": "Fork"
+    }
+  },
+  "fr-FR": {
+    "header": {
+      "title": "Maxime Buffa"
+    },
+    "topbar": {
+      "home": "Accueil",
+      "projects": "Projets"
+      },
+    "bio": {
+      "presentation": [
+        "Oh... Salut !",
+        "Mon nom est Maxime Buffa. Programmer est une passion depuis ma naissance (ou presque !) à Maisons-Laffitte en France en 1988.",
+        "Mais j'aime aussi les jeux vidéo, écouter de la musique classique, du métal et du synthwave, et regarder des films, surtout contemplatifs.",
+        "Ceci est ma page personnelle, et je compte écrire régulièrement à propos de mes projets, coups de coeur et trouvailles"
+      ]
+    },
+    "page": {
+      "home": {
+        "header": "Accueil",
+        "caption": []
+      },
+      "projects": {
+        "header": "Projets",
+        "caption": []
+      }
+    },
+    "footer": [
+      "Cette page Web est basée sur le modèle <a target='_blank' href='http://github.com/mbuffa/elerium'>Elerium</a> écrit par Maxime Buffa.",
+      "<br />N'hésitez pas à le forker sur Github :)"
+    ],
+    "locales": {
+      "en-US": "Anglais",
+      "fr-FR": "Français"
+    },
+    "shared": {
+      "created_at": "Créé le %{} à %{}",
+      "updated_at": "Mis à jour le %{} à %{}",
+      "fork": "Fork"
+    }
+  }
+}
