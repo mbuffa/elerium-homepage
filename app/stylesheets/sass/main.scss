@@ -1,7 +1,13 @@
 body {
+  background-color: #222;
   font-family: 'Arvo';
-  background-color: #333;
   color: white;
+}
+
+.container {
+  background-color: #333;
+  border-left: 1px dotted #444;
+  border-right: 1px dotted #444;
 }
 
 h1, h2, h3, h4, h5, h6, a, a:hover {
@@ -40,62 +46,53 @@ a.active {
   min-height: 100vh;
   display: flex;
   align-items: center;
-}
 
-.vertical-center * {
-  display: flex;
-  margin: auto;
+  * {
+    display: flex;
+    margin: auto;
+  }
 }
 
 .loading-spinner {
   z-index: 9000;
 }
 
-.container {
-  border-left: 1px dotted #444;
-  border-right: 1px dotted #444;
-}
-
 #topbar {
   font-family: 'Arvo';
   width: 100%;
   text-align: center;
-}
 
-#topbar ul {
-  float: none;
-  display: inline-block;
-  font-size: 1em;
-}
+  ul {
+    float: none;
+    display: inline-block;
+    font-size: 1em;
 
-#topbar ul li a {
-  background-color: transparent;
+    li a {
+      background-color: transparent;
+    }
+  }
 }
 
 #content {
-
-}
-
-#content > footer {
-  margin-top: 10em;
+  & > footer {
+    margin-top: 10em;
+  }
 }
 
 .locale-switch {
+  a {
+    color: orange;
+    cursor: pointer;
+    margin: 0.5ex;
+    padding: 0.5em;
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 black;
+  }
 
-}
-
-.locale-switch a {
-  color: orange;
-  cursor: pointer;
-  margin: 0.5ex;
-  padding: 0.5em;
-  display: inline-block;
-  text-decoration: none;
-  text-shadow: 2px 2px 0 black;
-}
-
-.locale-switch a:hover, .locale-switch a.active {
-  color: chocolate;
+  a:hover, a.active {
+    color: chocolate;
+  }
 }
 
 #avatar {
@@ -111,51 +108,49 @@ a.active {
 #social-links {
   font-size: 3em;
   text-align: center;
-}
 
-#social-links a, #social-links a:hover {
-  text-decoration: none;
+  a, a:hover {
+    text-decoration: none;
+  }
 }
 
 .post {
-  margin-bottom: 10em;
   padding: 2em;
-}
 
-.post p {
-  text-align: justify;
-  text-indent: 1em;
+  p {
+    text-align: justify;
+    text-indent: 1em;
+  }
 }
 
 .card {
   padding: 1em;
-}
 
-.card header {
+  header {
 
-}
+    h4 aside {
+      float: right;
+    }
+  }
 
-.card header h4 aside {
-  float: right;
-}
+  main {
+    text-align: justify;
+  }
 
-.card main {
-  text-align: justify;
-}
+  footer {
+    margin-top: 1em;
 
-.card footer {
-  margin-top: 1em;
-}
+    span {
+      font-size: 0.8em;
+      display: inline-block;
 
-.card footer span {
-  font-size: 0.8em;
-  display: inline-block;
-}
+      &:first-child {
+        float: left;
+      }
 
-.card footer span:first-child {
-  float: left;
-}
-
-.card footer span:last-child {
-  float: right;
+      &:last-child {
+        float: right;
+      }
+    }
+  }
 }
