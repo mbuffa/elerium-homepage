@@ -8,7 +8,11 @@
         _posts = [];
 
     github.getPostsList().then(function (response) {
-      response.map(function (file) {
+      var files = response.filter(function (item) {
+        return item.name.match(/^\w+\.md$/);
+      });
+
+      files.map(function (file) {
         github.get(file.url).then(function (fileResponse) {
           var post = {
             name: file.name,
