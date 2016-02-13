@@ -1,168 +1,192 @@
 /* line 1, sass/main.scss */
 body {
-  background-color: #222;
+  background-color: grey;
   font-family: 'Arvo';
-  color: white;
 }
-
-/* line 7, sass/main.scss */
-.container {
-  background-color: #333;
-  border-left: 1px dotted #444;
-  border-right: 1px dotted #444;
+/* line 5, sass/main.scss */
+body > .container {
+  margin-top: 1em;
 }
-
-/* line 13, sass/main.scss */
-h1, h2, h3, h4, h5, h6, a, a:hover {
-  color: orange;
-}
-
-/* line 17, sass/main.scss */
-h1, h2, h3, h4, h5, h6, .fa, #topbar a {
+/* line 9, sass/main.scss */
+body h1, body h2, body h3, body h4, body h5, body h6, body .fa, body .main-header a {
   text-shadow: 2px 2px 0 black;
 }
-
-/* line 21, sass/main.scss */
-header h2 {
-  text-align: center;
+/* line 13, sass/main.scss */
+body h1, body h2, body h3, body h4, body h5, body h6, body .fa, body a {
+  color: orange;
 }
-
-/* line 25, sass/main.scss */
-blockquote {
+/* line 17, sass/main.scss */
+body blockquote {
   border-color: #444;
   color: #ccc;
 }
-
-/* line 30, sass/main.scss */
-pre {
+/* line 22, sass/main.scss */
+body pre {
   background-color: #111;
   color: #ccc;
 }
-
-/* line 35, sass/main.scss */
-a:hover, a:focus, a:hover i {
-  background-color: transparent;
+/* line 27, sass/main.scss */
+body .vertical-center {
+  background-color: none;
   color: white;
-}
-
-/* line 40, sass/main.scss */
-a.active {
-  color: chocolate;
-}
-
-/* line 44, sass/main.scss */
-.vertical-center {
   min-height: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
 }
-/* line 50, sass/main.scss */
-.vertical-center * {
+/* line 35, sass/main.scss */
+body .vertical-center * {
   display: flex;
   margin: auto;
 }
-
-/* line 56, sass/main.scss */
-.loading-spinner {
+/* line 41, sass/main.scss */
+body .loading-spinner {
   z-index: 9000;
 }
 
-/* line 60, sass/main.scss */
-#topbar {
-  font-family: 'Arvo';
-  width: 100%;
-  text-align: center;
+/* line 46, sass/main.scss */
+.main-header {
+  background-color: #333;
+  color: white;
 }
-/* line 65, sass/main.scss */
-#topbar ul {
-  float: none;
+/* line 50, sass/main.scss */
+.main-header .pad {
+  background-color: #222;
+  padding: 1em;
+}
+/* line 54, sass/main.scss */
+.main-header .pad .locale-switch {
+  margin-left: 6em;
+  float: left;
+}
+/* line 58, sass/main.scss */
+.main-header .pad .locale-switch a {
   display: inline-block;
-  font-size: 1em;
-}
-/* line 70, sass/main.scss */
-#topbar ul li a {
-  background-color: transparent;
-}
-
-/* line 77, sass/main.scss */
-#content > footer {
-  margin-top: 10em;
-}
-
-/* line 83, sass/main.scss */
-.locale-switch a {
-  color: orange;
   cursor: pointer;
-  margin: 0.5ex;
-  padding: 0.5em;
-  display: inline-block;
+  margin-right: 2em;
   text-decoration: none;
-  text-shadow: 2px 2px 0 black;
 }
-/* line 93, sass/main.scss */
-.locale-switch a:hover, .locale-switch a.active {
-  color: chocolate;
+/* line 64, sass/main.scss */
+.main-header .pad .locale-switch a:hover, .main-header .pad .locale-switch a.active {
+  color: white;
 }
-
-/* line 98, sass/main.scss */
-#avatar {
-  max-height: 160px;
-  max-width: 160px;
+/* line 68, sass/main.scss */
+.main-header .pad .locale-switch a.active {
+  font-weight: bold;
 }
-
-/* line 103, sass/main.scss */
-#bio p {
-  text-align: justify;
-  margin-top: 1em;
-}
-
-/* line 108, sass/main.scss */
-#social-links {
-  font-size: 3em;
+/* line 74, sass/main.scss */
+.main-header .pad .social-links {
+  display: block;
+  float: right;
   text-align: center;
 }
-/* line 112, sass/main.scss */
-#social-links a, #social-links a:hover {
+/* line 79, sass/main.scss */
+.main-header .pad .social-links i {
+  font-size: 2em;
+}
+/* line 83, sass/main.scss */
+.main-header .pad .social-links a, .main-header .pad .social-links a:hover {
+  display: inline-block;
   text-decoration: none;
 }
-
-/* line 117, sass/main.scss */
-.post {
-  padding: 2em;
+/* line 88, sass/main.scss */
+.main-header .pad .social-links a:hover i {
+  color: white;
+}
+/* line 94, sass/main.scss */
+.main-header img.avatar {
+  box-shadow: -1px -1px 10px black inset;
+  max-width: 200px;
+  max-height: 200px;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* line 103, sass/main.scss */
+.main-header h1 {
+  text-align: left;
+}
+/* line 107, sass/main.scss */
+.main-header p {
+  font-size: 1.5em;
+}
+/* line 111, sass/main.scss */
+.main-header ul {
+  background-color: #222;
+  width: 100%;
+}
+/* line 116, sass/main.scss */
+.main-header ul li:first-child {
+  margin-left: 6em;
 }
 /* line 120, sass/main.scss */
-.post p {
+.main-header ul li a:hover, .main-header ul li a:focus, .main-header ul li a.active {
+  color: white;
+  background-color: transparent;
+}
+/* line 125, sass/main.scss */
+.main-header ul li a.active {
+  font-weight: bold;
+  box-shadow: 0 -3px 0 #444 inset;
+}
+
+/* line 133, sass/main.scss */
+.main-content {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+}
+/* line 138, sass/main.scss */
+.main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+  color: orange;
+}
+/* line 142, sass/main.scss */
+.main-content .post {
+  font-size: 1.4em;
+  padding: 2em;
+}
+/* line 146, sass/main.scss */
+.main-content .post p {
   text-align: justify;
   text-indent: 1em;
 }
-
-/* line 126, sass/main.scss */
-.card {
+/* line 152, sass/main.scss */
+.main-content .card {
   padding: 1em;
 }
-/* line 131, sass/main.scss */
-.card header h4 aside {
+/* line 156, sass/main.scss */
+.main-content .card header h4 aside {
   float: right;
 }
-/* line 136, sass/main.scss */
-.card main {
+/* line 161, sass/main.scss */
+.main-content .card main {
   text-align: justify;
 }
-/* line 140, sass/main.scss */
-.card footer {
+/* line 165, sass/main.scss */
+.main-content .card footer {
   margin-top: 1em;
 }
-/* line 143, sass/main.scss */
-.card footer span {
+/* line 168, sass/main.scss */
+.main-content .card footer span {
   font-size: 0.8em;
   display: inline-block;
 }
-/* line 147, sass/main.scss */
-.card footer span:first-child {
+/* line 172, sass/main.scss */
+.main-content .card footer span:first-child {
   float: left;
 }
-/* line 151, sass/main.scss */
-.card footer span:last-child {
+/* line 176, sass/main.scss */
+.main-content .card footer span:last-child {
   float: right;
+}
+
+/* line 184, sass/main.scss */
+.main-footer {
+  background-color: #333;
+  color: white;
+}
+/* line 188, sass/main.scss */
+.main-footer p {
+  text-align: center;
+  padding: 2em;
 }

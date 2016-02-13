@@ -1,156 +1,192 @@
 body {
-  background-color: #222;
+  background-color: grey;
   font-family: 'Arvo';
-  color: white;
-}
 
-.container {
-  background-color: #333;
-  border-left: 1px dotted #444;
-  border-right: 1px dotted #444;
-}
-
-h1, h2, h3, h4, h5, h6, a, a:hover {
-  color: orange;
-}
-
-h1, h2, h3, h4, h5, h6, .fa, #topbar a {
-  text-shadow: 2px 2px 0 black;
-}
-
-header h2 {
-  text-align: center;
-}
-
-blockquote {
-  border-color: #444;
-  color: #ccc;
-}
-
-pre {
-  background-color: #111;
-  color: #ccc;
-}
-
-a:hover, a:focus, a:hover i {
-  background-color: transparent;
-  color: white;
-}
-
-a.active {
-  color: chocolate;
-}
-
-.vertical-center {
-  min-height: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-
-  * {
-    display: flex;
-    margin: auto;
+  & > .container {
+    margin-top: 1em;
   }
-}
 
-.loading-spinner {
-  z-index: 9000;
-}
-
-#topbar {
-  font-family: 'Arvo';
-  width: 100%;
-  text-align: center;
-
-  ul {
-    float: none;
-    display: inline-block;
-    font-size: 1em;
-
-    li a {
-      background-color: transparent;
-    }
-  }
-}
-
-#content {
-  & > footer {
-    margin-top: 10em;
-  }
-}
-
-.locale-switch {
-  a {
-    color: orange;
-    cursor: pointer;
-    margin: 0.5ex;
-    padding: 0.5em;
-    display: inline-block;
-    text-decoration: none;
+  h1, h2, h3, h4, h5, h6, .fa, .main-header a {
     text-shadow: 2px 2px 0 black;
   }
 
-  a:hover, a.active {
-    color: chocolate;
+  h1, h2, h3, h4, h5, h6, .fa, a {
+    color: orange;
   }
-}
 
-#avatar {
-  max-height: 160px;
-  max-width: 160px;
-}
-
-#bio p {
-  text-align: justify;
-  margin-top: 1em;
-}
-
-#social-links {
-  font-size: 3em;
-  text-align: center;
-
-  a, a:hover {
-    text-decoration: none;
+  blockquote {
+    border-color: #444;
+    color: #ccc;
   }
-}
 
-.post {
-  padding: 2em;
-
-  p {
-    text-align: justify;
-    text-indent: 1em;
+  pre {
+    background-color: #111;
+    color: #ccc;
   }
-}
 
-.card {
-  padding: 1em;
+  .vertical-center {
+    background-color: none;
+    color: white;
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 
-  header {
-
-    h4 aside {
-      float: right;
+    * {
+      display: flex;
+      margin: auto;
     }
   }
 
-  main {
-    text-align: justify;
+  .loading-spinner {
+    z-index: 9000;
   }
+}
 
-  footer {
-    margin-top: 1em;
+.main-header {
+  background-color: #333;
+  color: white;
 
-    span {
-      font-size: 0.8em;
-      display: inline-block;
+  .pad {
+    background-color: #222;
+    padding: 1em;
 
-      &:first-child {
-        float: left;
+    .locale-switch {
+      margin-left: 6em;
+      float: left;
+
+      a {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 2em;
+        text-decoration: none;
+
+        &:hover, &.active {
+          color: white;
+        }
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .social-links {
+      display: block;
+      float: right;
+      text-align: center;
+
+      i {
+        font-size: 2em;
       }
 
-      &:last-child {
+      a, a:hover {
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      a:hover i {
+        color: white;
+      }
+    }
+  }
+
+  img.avatar {
+    box-shadow: -1px -1px 10px black inset;
+    max-width: 200px;
+    max-height: 200px;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  ul {
+    background-color: #222;
+    width: 100%;
+
+    li {
+      &:first-child {
+        margin-left: 6em;
+      }
+
+      a:hover, a:focus, a.active {
+        color: white;
+        background-color: transparent;
+      }
+
+      a.active {
+        font-weight: bold;
+        box-shadow: 0 -3px 0 #444 inset;
+      }
+    }
+  }
+}
+
+.main-content {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+
+  h2, h3, h4, h5, h6 {
+    color: orange;
+  }
+
+  .post {
+    font-size: 1.4em;
+    padding: 2em;
+
+    p {
+      text-align: justify;
+      text-indent: 1em;
+    }
+  }
+
+  .card {
+    padding: 1em;
+
+    header {
+      h4 aside {
         float: right;
       }
     }
+
+    main {
+      text-align: justify;
+    }
+
+    footer {
+      margin-top: 1em;
+
+      span {
+        font-size: 0.8em;
+        display: inline-block;
+
+        &:first-child {
+          float: left;
+        }
+
+        &:last-child {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+.main-footer {
+  background-color: #333;
+  color: white;
+
+  p {
+    text-align: center;
+    padding: 2em;
   }
 }

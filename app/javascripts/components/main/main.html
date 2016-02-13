@@ -1,30 +1,41 @@
 <div>
-  <div ng-hide='mainCtrl.isLoaded()'>
-    <main class='col-md-12 col-sm-12 loading-spinner'>
-      <div class='vertical-center'>
-        <i class='fa fa-spinner fa-spin fa-4x'></i>
-      </div>
-    </main>
+  <div ng-if='!mainCtrl.isLoaded()'
+       spinner>
   </div>
 
-  <div>
-    <aside ng-if='mainCtrl.isLoaded()'
-           class='col-md-2 col-sm-12'>
-      <div class='locale-switch text-center'>
-        <a ng-repeat='locale in mainCtrl.getAvailableLocales()'
-           ng-click='mainCtrl.setLocale(locale)'
-           ng-class='mainCtrl.getLocaleCssClass(locale)'>{{ i18n.t('locales.' + locale) }}</a>
-      </div>
+  <div class='container'>
+    <main ng-if='mainCtrl.isLoaded()'>
+      <header class='row main-header'>
+        <div class='row'>
+          <div class='pad col-md-12'>
+            <div class='locale-switch'>
+              <a ng-repeat='locale in mainCtrl.getAvailableLocales()'
+                 ng-click='mainCtrl.setLocale(locale)'
+                 ng-class='mainCtrl.getLocaleCssClass(locale)'>{{ i18n.t('locales.' + locale) }}
+              </a>
+            </div>
 
-      <div bio></div>
-    </aside>
+            <div class='social-links'>
+              <a target='_blank' href='https://www.github.com/mbuffa'>
+                <i class='fa fa-github'></i>
+              </a>
+              <a target='_blank' href='https://fr.linkedin.com/pub/maxime-buffa/86/39b/40a'>
+                <i class='fa fa-linkedin'></i>
+              </a>
+            </div>
+          </div>
 
-    <main id='content' class='col-md-10 col-sm-12'>
-      <header ng-if='mainCtrl.isLoaded()'
-              class='header row'>
-        <h1 class='text-center'>{{ i18n.t('header.title') }}</h1>
+          <div class='col-md-3'>
+            <img class='avatar img-responsive img-circle center-block'
+                 src="app/images/avatar.jpg">
+          </div>
+          <div class='col-md-9'>
+            <h1>{{ i18n.t('header.title') }}</h1>
+            <p>{{ i18n.t('bio.presentation') }}</p>
+          </div>
+        </div>
 
-        <div id='topbar'>
+        <div class='row'>
           <ul class='nav navbar-nav'>
             <li><a href='#/'
                    ng-class="mainCtrl.getNavCssClass('/')">{{ i18n.t('topbar.home') }}</a></li>
@@ -34,12 +45,12 @@
         </div>
       </header>
 
-      <div class='row'>
+      <div class='row main-content'>
         <div ng-view></div>
       </div>
 
       <footer ng-if='mainCtrl.isLoaded()'
-              class='row text-center'>
+              class='row main-footer'>
         <p ng-bind-html="mainCtrl.getFooterTranslation()"></p>
       </footer>
     </main>
