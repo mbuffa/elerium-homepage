@@ -5,9 +5,9 @@
 
   <div class='container'>
     <main ng-if='mainCtrl.isLoaded()'>
-      <header class='row main-header'>
+      <header class='main-header'>
         <div class='row'>
-          <div class='pad col-md-12'>
+          <div class='pad col-md-12 col-sm-12'>
             <div class='locale-switch'>
               <a ng-repeat='locale in mainCtrl.getAvailableLocales()'
                  ng-click='mainCtrl.setLocale(locale)'
@@ -24,12 +24,14 @@
               </a>
             </div>
           </div>
+        </div>
 
-          <div class='col-md-3'>
+        <div class='row'>
+          <div class='col-md-3 col-sm-12'>
             <img class='avatar img-responsive img-circle center-block'
                  src="app/images/avatar.jpg">
           </div>
-          <div class='col-md-9'>
+          <div class='col-md-9 col-sm-12'>
             <h1>{{ i18n.t('header.title') }}</h1>
             <p>{{ i18n.t('bio.presentation') }}</p>
           </div>
@@ -45,12 +47,12 @@
         </div>
       </header>
 
-      <div class='row main-content'>
+      <div class='main-content'>
         <div ng-view></div>
       </div>
 
       <footer ng-if='mainCtrl.isLoaded()'
-              class='row main-footer'>
+              class='main-footer'>
         <p ng-bind-html="mainCtrl.getFooterTranslation()"></p>
       </footer>
     </main>

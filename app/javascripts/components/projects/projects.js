@@ -35,8 +35,8 @@
     this.formatDate = function (value, i18nPath) {
       return i18n.translate(i18nPath, {
         params: [
-          $filter('date')(value, 'H:m:s'),
-          $filter('date')(value, 'yyyy-MM-d')
+          $filter('date')(value, 'd MMMM yyyy'),
+          $filter('date')(value, 'H:mm')
         ]
       });
     }

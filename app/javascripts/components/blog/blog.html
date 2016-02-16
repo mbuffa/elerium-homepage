@@ -8,7 +8,5 @@
   <div ng-repeat="post in blogCtrl.getPosts() | orderBy:'-name'"
        class='post'>
     <div ng-bind-html="post.content"></div>
-
-    <hr />
   </div>
 </div>

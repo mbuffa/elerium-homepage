@@ -1,6 +1,6 @@
 /* line 1, sass/main.scss */
 body {
-  background-color: grey;
+  background-color: #ccc;
   font-family: 'Arvo';
 }
 /* line 5, sass/main.scss */
@@ -45,55 +45,74 @@ body .loading-spinner {
 }
 
 /* line 46, sass/main.scss */
+.container {
+  box-shadow: 1ex 1ex 0 black;
+}
+
+/* line 50, sass/main.scss */
 .main-header {
   background-color: #333;
-  color: white;
-}
-/* line 50, sass/main.scss */
-.main-header .pad {
-  background-color: #222;
-  padding: 1em;
+  color: #eee;
 }
 /* line 54, sass/main.scss */
+.main-header .pad {
+  background-color: #222;
+  display: block;
+  min-height: 4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 1ex 1ex 0 black;
+}
+/* line 62, sass/main.scss */
+.main-header .pad:after {
+  clear: both;
+}
+/* line 66, sass/main.scss */
 .main-header .pad .locale-switch {
-  margin-left: 6em;
   float: left;
 }
-/* line 58, sass/main.scss */
+/* line 69, sass/main.scss */
+.main-header .pad .locale-switch * {
+  vertical-align: middle;
+}
+/* line 73, sass/main.scss */
 .main-header .pad .locale-switch a {
   display: inline-block;
   cursor: pointer;
-  margin-right: 2em;
+  margin-right: 1em;
   text-decoration: none;
 }
-/* line 64, sass/main.scss */
+/* line 79, sass/main.scss */
 .main-header .pad .locale-switch a:hover, .main-header .pad .locale-switch a.active {
-  color: white;
+  color: #eee;
 }
-/* line 68, sass/main.scss */
+/* line 83, sass/main.scss */
 .main-header .pad .locale-switch a.active {
   font-weight: bold;
 }
-/* line 74, sass/main.scss */
+/* line 89, sass/main.scss */
 .main-header .pad .social-links {
-  display: block;
   float: right;
-  text-align: center;
 }
-/* line 79, sass/main.scss */
+/* line 92, sass/main.scss */
+.main-header .pad .social-links * {
+  vertical-align: middle;
+}
+/* line 96, sass/main.scss */
+.main-header .pad .social-links a {
+  display: inline-block;
+  margin-left: 1em;
+  text-decoration: none;
+}
+/* line 102, sass/main.scss */
+.main-header .pad .social-links a:hover i {
+  color: #eee;
+}
+/* line 106, sass/main.scss */
 .main-header .pad .social-links i {
   font-size: 2em;
 }
-/* line 83, sass/main.scss */
-.main-header .pad .social-links a, .main-header .pad .social-links a:hover {
-  display: inline-block;
-  text-decoration: none;
-}
-/* line 88, sass/main.scss */
-.main-header .pad .social-links a:hover i {
-  color: white;
-}
-/* line 94, sass/main.scss */
+/* line 112, sass/main.scss */
 .main-header img.avatar {
   box-shadow: -1px -1px 10px black inset;
   max-width: 200px;
@@ -102,90 +121,119 @@ body .loading-spinner {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 103, sass/main.scss */
+/* line 121, sass/main.scss */
 .main-header h1 {
   text-align: left;
 }
-/* line 107, sass/main.scss */
+/* line 125, sass/main.scss */
 .main-header p {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
-/* line 111, sass/main.scss */
+/* line 129, sass/main.scss */
 .main-header ul {
   background-color: #222;
+  box-shadow: 1ex 1ex 0 black;
   width: 100%;
 }
-/* line 116, sass/main.scss */
-.main-header ul li:first-child {
-  margin-left: 6em;
-}
-/* line 120, sass/main.scss */
+/* line 135, sass/main.scss */
 .main-header ul li a:hover, .main-header ul li a:focus, .main-header ul li a.active {
-  color: white;
+  color: #eee;
   background-color: transparent;
 }
-/* line 125, sass/main.scss */
+/* line 140, sass/main.scss */
 .main-header ul li a.active {
   font-weight: bold;
   box-shadow: 0 -3px 0 #444 inset;
 }
+@media (max-width: 991px) {
+  /* line 148, sass/main.scss */
+  .main-header h1 {
+    text-align: center;
+  }
+  /* line 152, sass/main.scss */
+  .main-header ul li a {
+    text-align: center;
+  }
+  /* line 156, sass/main.scss */
+  .main-header p {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+  }
+}
 
-/* line 133, sass/main.scss */
+/* line 164, sass/main.scss */
 .main-content {
   background-color: #333;
-  color: white;
+  color: #eee;
   padding: 1em;
 }
-/* line 138, sass/main.scss */
+/* line 169, sass/main.scss */
 .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
   color: orange;
 }
-/* line 142, sass/main.scss */
+/* line 173, sass/main.scss */
 .main-content .post {
-  font-size: 1.4em;
+  font-size: 1.2em;
   padding: 2em;
-}
-/* line 146, sass/main.scss */
-.main-content .post p {
   text-align: justify;
+}
+/* line 178, sass/main.scss */
+.main-content .post p {
   text-indent: 1em;
 }
-/* line 152, sass/main.scss */
+@media (max-width: 991px) {
+  /* line 173, sass/main.scss */
+  .main-content .post {
+    font-size: 1em;
+    padding: 0;
+    text-align: center;
+  }
+  /* line 187, sass/main.scss */
+  .main-content .post p {
+    text-indent: none;
+  }
+}
+/* line 193, sass/main.scss */
 .main-content .card {
   padding: 1em;
 }
-/* line 156, sass/main.scss */
+/* line 197, sass/main.scss */
 .main-content .card header h4 aside {
   float: right;
 }
-/* line 161, sass/main.scss */
+/* line 202, sass/main.scss */
 .main-content .card main {
   text-align: justify;
 }
-/* line 165, sass/main.scss */
+@media (max-width: 991px) {
+  /* line 202, sass/main.scss */
+  .main-content .card main {
+    text-align: center;
+  }
+}
+/* line 210, sass/main.scss */
 .main-content .card footer {
   margin-top: 1em;
 }
-/* line 168, sass/main.scss */
+/* line 213, sass/main.scss */
 .main-content .card footer span {
-  font-size: 0.8em;
   display: inline-block;
+  width: 100%;
 }
-/* line 172, sass/main.scss */
-.main-content .card footer span:first-child {
-  float: left;
-}
-/* line 176, sass/main.scss */
-.main-content .card footer span:last-child {
-  float: right;
+@media (max-width: 991px) {
+  /* line 213, sass/main.scss */
+  .main-content .card footer span {
+    text-align: center;
+  }
 }
 
-/* line 184, sass/main.scss */
+/* line 225, sass/main.scss */
 .main-footer {
   background-color: #333;
-  color: white;
+  color: #eee;
 }
-/* line 188, sass/main.scss */
+/* line 229, sass/main.scss */
 .main-footer p {
   text-align: center;
   padding: 2em;

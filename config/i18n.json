@@ -34,8 +34,8 @@
       "fr-FR": "French"
     },
     "shared": {
-      "created_at": "Created at %{} on %{}",
-      "updated_at": "Updated at %{} on %{}",
+      "created_at": "Created on %{} at %{}",
+      "updated_at": "Updated on %{} at %{}",
       "fork": "Fork"
     }
   },

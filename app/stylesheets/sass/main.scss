@@ -1,5 +1,5 @@
 body {
-  background-color: grey;
+  background-color: #ccc;
   font-family: 'Arvo';
 
   & > .container {
@@ -43,26 +43,41 @@ body {
   }
 }
 
+.container {
+  box-shadow: 1ex 1ex 0 black;
+}
+
 .main-header {
   background-color: #333;
-  color: white;
+  color: #eee;
 
   .pad {
     background-color: #222;
-    padding: 1em;
+    display: block;
+    min-height: 4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 1ex 1ex 0 black;
+
+    &:after {
+      clear: both;
+    }
 
     .locale-switch {
-      margin-left: 6em;
       float: left;
+
+      * {
+        vertical-align: middle;
+      }
 
       a {
         display: inline-block;
         cursor: pointer;
-        margin-right: 2em;
+        margin-right: 1em;
         text-decoration: none;
 
         &:hover, &.active {
-          color: white;
+          color: #eee;
         }
 
         &.active {
@@ -72,21 +87,24 @@ body {
     }
 
     .social-links {
-      display: block;
       float: right;
-      text-align: center;
 
-      i {
-        font-size: 2em;
+      * {
+        vertical-align: middle;
       }
 
-      a, a:hover {
+      a {
         display: inline-block;
+        margin-left: 1em;
         text-decoration: none;
       }
 
       a:hover i {
-        color: white;
+        color: #eee;
+      }
+
+      i {
+        font-size: 2em;
       }
     }
   }
@@ -105,20 +123,17 @@ body {
   }
 
   p {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   ul {
     background-color: #222;
+    box-shadow: 1ex 1ex 0 black;
     width: 100%;
 
     li {
-      &:first-child {
-        margin-left: 6em;
-      }
-
       a:hover, a:focus, a.active {
-        color: white;
+        color: #eee;
         background-color: transparent;
       }
 
@@ -128,11 +143,27 @@ body {
       }
     }
   }
+
+  @media (max-width: 991px) {
+    h1 {
+      text-align: center;
+    }
+
+    ul li a {
+      text-align: center;
+    }
+
+    p {
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center;
+    }
+  }
 }
 
 .main-content {
   background-color: #333;
-  color: white;
+  color: #eee;
   padding: 1em;
 
   h2, h3, h4, h5, h6 {
@@ -140,12 +171,22 @@ body {
   }
 
   .post {
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 2em;
+    text-align: justify;
 
     p {
-      text-align: justify;
       text-indent: 1em;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 1em;
+      padding: 0;
+      text-align: center;
+
+      p {
+        text-indent: none;
+      }
     }
   }
 
@@ -160,21 +201,21 @@ body {
 
     main {
       text-align: justify;
+
+      @media (max-width: 991px) {
+        text-align: center;
+      }
     }
 
     footer {
       margin-top: 1em;
 
       span {
-        font-size: 0.8em;
         display: inline-block;
+        width: 100%;
 
-        &:first-child {
-          float: left;
-        }
-
-        &:last-child {
-          float: right;
+        @media (max-width: 991px) {
+          text-align: center;
         }
       }
     }
@@ -183,7 +224,7 @@ body {
 
 .main-footer {
   background-color: #333;
-  color: white;
+  color: #eee;
 
   p {
     text-align: center;
