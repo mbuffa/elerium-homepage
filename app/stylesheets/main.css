@@ -45,16 +45,11 @@ body .loading-spinner {
 }
 
 /* line 46, sass/main.scss */
-.container {
-  box-shadow: 1ex 1ex 0 black;
-}
-
-/* line 50, sass/main.scss */
 .main-header {
   background-color: #333;
   color: #eee;
 }
-/* line 54, sass/main.scss */
+/* line 50, sass/main.scss */
 .main-header .pad {
   background-color: #222;
   display: block;
@@ -63,56 +58,56 @@ body .loading-spinner {
   padding-bottom: 1em;
   box-shadow: 1ex 1ex 0 black;
 }
-/* line 62, sass/main.scss */
+/* line 58, sass/main.scss */
 .main-header .pad:after {
   clear: both;
 }
-/* line 66, sass/main.scss */
+/* line 62, sass/main.scss */
 .main-header .pad .locale-switch {
   float: left;
 }
-/* line 69, sass/main.scss */
+/* line 65, sass/main.scss */
 .main-header .pad .locale-switch * {
   vertical-align: middle;
 }
-/* line 73, sass/main.scss */
+/* line 69, sass/main.scss */
 .main-header .pad .locale-switch a {
   display: inline-block;
   cursor: pointer;
   margin-right: 1em;
   text-decoration: none;
 }
-/* line 79, sass/main.scss */
+/* line 75, sass/main.scss */
 .main-header .pad .locale-switch a:hover, .main-header .pad .locale-switch a.active {
   color: #eee;
 }
-/* line 83, sass/main.scss */
+/* line 79, sass/main.scss */
 .main-header .pad .locale-switch a.active {
   font-weight: bold;
 }
-/* line 89, sass/main.scss */
+/* line 85, sass/main.scss */
 .main-header .pad .social-links {
   float: right;
 }
-/* line 92, sass/main.scss */
+/* line 88, sass/main.scss */
 .main-header .pad .social-links * {
   vertical-align: middle;
 }
-/* line 96, sass/main.scss */
+/* line 92, sass/main.scss */
 .main-header .pad .social-links a {
   display: inline-block;
   margin-left: 1em;
   text-decoration: none;
 }
-/* line 102, sass/main.scss */
+/* line 98, sass/main.scss */
 .main-header .pad .social-links a:hover i {
   color: #eee;
 }
-/* line 106, sass/main.scss */
+/* line 102, sass/main.scss */
 .main-header .pad .social-links i {
   font-size: 2em;
 }
-/* line 112, sass/main.scss */
+/* line 108, sass/main.scss */
 .main-header img.avatar {
   box-shadow: -1px -1px 10px black inset;
   max-width: 200px;
@@ -121,40 +116,40 @@ body .loading-spinner {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-/* line 121, sass/main.scss */
+/* line 117, sass/main.scss */
 .main-header h1 {
   text-align: left;
 }
-/* line 125, sass/main.scss */
+/* line 121, sass/main.scss */
 .main-header p {
   font-size: 1.2em;
 }
-/* line 129, sass/main.scss */
+/* line 125, sass/main.scss */
 .main-header ul {
   background-color: #222;
   box-shadow: 1ex 1ex 0 black;
   width: 100%;
 }
-/* line 135, sass/main.scss */
+/* line 131, sass/main.scss */
 .main-header ul li a:hover, .main-header ul li a:focus, .main-header ul li a.active {
   color: #eee;
   background-color: transparent;
 }
-/* line 140, sass/main.scss */
+/* line 136, sass/main.scss */
 .main-header ul li a.active {
   font-weight: bold;
   box-shadow: 0 -3px 0 #444 inset;
 }
 @media (max-width: 991px) {
-  /* line 148, sass/main.scss */
+  /* line 144, sass/main.scss */
   .main-header h1 {
     text-align: center;
   }
-  /* line 152, sass/main.scss */
+  /* line 148, sass/main.scss */
   .main-header ul li a {
     text-align: center;
   }
-  /* line 156, sass/main.scss */
+  /* line 152, sass/main.scss */
   .main-header p {
     padding-left: 15px;
     padding-right: 15px;
@@ -162,78 +157,78 @@ body .loading-spinner {
   }
 }
 
-/* line 164, sass/main.scss */
+/* line 160, sass/main.scss */
 .main-content {
   background-color: #333;
   color: #eee;
   padding: 1em;
 }
-/* line 169, sass/main.scss */
+/* line 165, sass/main.scss */
 .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
   color: orange;
 }
-/* line 173, sass/main.scss */
+/* line 169, sass/main.scss */
 .main-content .post {
   font-size: 1.2em;
   padding: 2em;
   text-align: justify;
 }
-/* line 178, sass/main.scss */
+/* line 174, sass/main.scss */
 .main-content .post p {
   text-indent: 1em;
 }
 @media (max-width: 991px) {
-  /* line 173, sass/main.scss */
+  /* line 169, sass/main.scss */
   .main-content .post {
     font-size: 1em;
     padding: 0;
     text-align: center;
   }
-  /* line 187, sass/main.scss */
+  /* line 183, sass/main.scss */
   .main-content .post p {
     text-indent: none;
   }
 }
-/* line 193, sass/main.scss */
+/* line 189, sass/main.scss */
 .main-content .card {
   padding: 1em;
 }
-/* line 197, sass/main.scss */
+/* line 193, sass/main.scss */
 .main-content .card header h4 aside {
   float: right;
 }
-/* line 202, sass/main.scss */
+/* line 198, sass/main.scss */
 .main-content .card main {
   text-align: justify;
 }
 @media (max-width: 991px) {
-  /* line 202, sass/main.scss */
+  /* line 198, sass/main.scss */
   .main-content .card main {
     text-align: center;
   }
 }
-/* line 210, sass/main.scss */
+/* line 206, sass/main.scss */
 .main-content .card footer {
   margin-top: 1em;
 }
-/* line 213, sass/main.scss */
+/* line 209, sass/main.scss */
 .main-content .card footer span {
   display: inline-block;
   width: 100%;
 }
 @media (max-width: 991px) {
-  /* line 213, sass/main.scss */
+  /* line 209, sass/main.scss */
   .main-content .card footer span {
     text-align: center;
   }
 }
 
-/* line 225, sass/main.scss */
+/* line 221, sass/main.scss */
 .main-footer {
   background-color: #333;
   color: #eee;
 }
-/* line 229, sass/main.scss */
+/* line 225, sass/main.scss */
 .main-footer p {
   text-align: center;
   padding: 2em;
